@@ -311,7 +311,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
-    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
@@ -774,7 +773,6 @@ PRODUCT_PACKAGES += \
     HEVCSecureVdecCA \
     VP9SecureVdecCA \
     audio.primary.mt6877 \
-    audio.r_submix.mt6877 \
     sound_trigger.primary.default \
     libHEVCdec_sa.ca7.android \
     libMtkSpeechEnh \
@@ -829,8 +827,6 @@ PRODUCT_PACKAGES += \
     libvpud_vcodec \
     libswdap \
     vendor.mediatek.hardware.audio@7.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     APUWareApusysServer \
     APUWareUtilsServer \
     APUWareXrpServer_v2 \
@@ -1888,7 +1884,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
-    android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks@1.3-service-mtk-neuron \
     camerahalserver \
     mtkfusionrild \
@@ -1915,7 +1910,6 @@ PRODUCT_PACKAGES += \
     wlan_assistant
 
 PRODUCT_PACKAGES += \
-    vendor_bin_hw_android_hardware_media_c2@1_2-mediatek \
     vendor_lib_libmtk_drvb_so \
     vendor_lib64_hw_fingerprint_fpc_default_so \
     vendor_lib64_hw_fingerprint_goodix_default_so \
