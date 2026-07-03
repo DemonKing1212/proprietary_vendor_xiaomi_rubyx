@@ -312,6 +312,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/gsm0710muxd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/gsm0710muxd.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/init.cccimdinit.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccimdinit.rc \
@@ -332,6 +333,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram@1.1-sevice.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.microtrust.hardware.se@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.se@1.0-service.rc \
+    vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.soter@1.0-service.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.microtrust.hardware.thh@2.0-service.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-iseeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mfidoca@1.0-iseeservice.rc \
     vendor/xiaomi/rubyx/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-iseeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-iseeservice.rc \
@@ -1775,6 +1778,7 @@ PRODUCT_PACKAGES += \
     libstereoinfoaccessor_vsdof \
     libstorage_otp \
     libsysenv \
+    libtflite_mtk \
     libthhclient \
     libtlcWidevineModularDrm \
     libtrm \
@@ -1818,6 +1822,7 @@ PRODUCT_PACKAGES += \
     s5khpxofilm_mipi_raw_tuning \
     s5khpxsemco_mipi_raw_IdxMgr \
     s5khpxsemco_mipi_raw_tuning \
+    secure_element-impl \
     libswgamedap \
     libswvqe \
     vendor.dolby.hardware.dms@2.0-impl \
@@ -1863,6 +1868,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq@2.8 \
     vendor.mediatek.hardware.pq@2.9 \
     vendor.mediatek.hardware.videotelephony@1.0 \
+    vendor.microtrust.hardware.soter@1.0 \
     vendor.microtrust.hardware.thh@2.0 \
     wechat.beanpod \
     android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml \
@@ -1870,6 +1876,7 @@ PRODUCT_PACKAGES += \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
+    manifest_microtrust_wechat.xml \
     manifest_vendor.dolby.hardware.dms.xml \
     microtrust_thh_manifest.xml \
     batterysecret \
@@ -1885,6 +1892,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
     android.hardware.neuralnetworks@1.3-service-mtk-neuron \
+    android.hardware.secure_element@1.2-service-mediatek \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
@@ -1892,6 +1900,8 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mms@1.6-service \
     vendor.mediatek.hardware.nvram@1.1-service \
     vendor.mediatek.hardware.pq@2.2-service \
+    vendor.microtrust.hardware.se@1.0-service \
+    vendor.microtrust.hardware.soter@1.0-service \
     vendor.microtrust.hardware.thh@2.0-service \
     vtservice_hidl \
     init_thh_isee \

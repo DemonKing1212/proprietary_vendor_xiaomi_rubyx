@@ -25287,6 +25287,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -29192,6 +29193,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtflite_mtk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtflite_mtk.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libflatbuffers-cpp",
+                "libruy",
+                "libtextclassifier_hash",
+                "libnativewindow",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libthhclient",
     owner: "xiaomi",
     strip: {
@@ -30704,6 +30733,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "secure_element-impl",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/secure_element-impl.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "android.hardware.secure_element@1.0",
+                "libTEECommon",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libswgamedap",
     owner: "xiaomi",
     strip: {
@@ -32132,6 +32192,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.microtrust.hardware.soter@1.0",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.microtrust.hardware.soter@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.microtrust.hardware.thh@2.0",
     owner: "xiaomi",
     strip: {
@@ -32227,6 +32315,15 @@ prebuilt_etc_xml {
     name: "manifest_android.hardware.drm@1.4-service.widevine.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "manifest_microtrust_wechat.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_microtrust_wechat.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -32685,6 +32782,45 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.secure_element@1.2-service-mediatek",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek",
+            ],
+            shared_libs: [
+                "vendor.mediatek.hardware.mtkradioex@2.0",
+                "libhidlbase",
+                "libutils",
+                "android.hardware.secure_element@1.0",
+                "android.hardware.secure_element@1.1",
+                "android.hardware.secure_element@1.2",
+                "libcutils",
+                "liblog",
+                "android.hardware.radio@1.0",
+                "android.hardware.radio@1.1",
+                "android.hardware.radio@1.2",
+                "android.hardware.radio@1.3",
+                "android.hardware.radio@1.4",
+                "vendor.mediatek.hardware.mtkradioex@3.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "camerahalserver",
     owner: "xiaomi",
     target: {
@@ -32917,6 +33053,82 @@ cc_prebuilt_binary {
                 "libutils",
                 "libhardware",
                 "vendor.mediatek.hardware.pq@2.14",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.microtrust.hardware.se@1.0-service",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.microtrust.hardware.se@1.0-service",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libhidlbase",
+                "libhidltransport",
+                "libutils",
+                "libutilscallstack",
+                "android.hardware.secure_element@1.0",
+                "libTEECommon",
+                "libhardware",
+                "libbase",
+                "libhwbinder",
+                "vendor.xiaomi.hardware.mtdservice@1.0",
+                "secure_element-impl",
+                "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.microtrust.hardware.soter@1.0-service",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.microtrust.hardware.soter@1.0-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware",
+                "libhidlbase",
+                "vendor.microtrust.hardware.soter@1.0",
+                "libTEECommon",
+                "libssl",
+                "wechat.beanpod",
+                "libcrypto",
+                "libmisight",
                 "libc++",
                 "libc",
                 "libm",
